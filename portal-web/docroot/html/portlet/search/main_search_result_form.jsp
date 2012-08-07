@@ -66,6 +66,10 @@ if (assetRendererFactory != null) {
 		viewFullContentURL.setParameter("urlTitle", assetRenderer.getUrlTitle());
 	}
 
+	if (Validator.isNotNull(returnToFullPageURL)) {
+		viewFullContentURL.setParameter("returnToFullPageURL", returnToFullPageURL);
+	}
+
 	if (viewInContext) {
 		String viewFullContentURLString = viewFullContentURL.toString();
 
