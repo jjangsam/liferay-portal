@@ -283,15 +283,14 @@ else if (dlFileEntryType != null) {
 			<aui:validator name="acceptFiles">
 				'<%= StringUtil.merge(PrefsPropsUtil.getStringArray(PropsKeys.DL_FILE_EXTENSIONS, StringPool.COMMA)) %>'
 			</aui:validator>
-		</aui:input>
-
-		<aui:input name="title">
-			<aui:validator errorMessage="you-must-specify-a-file-or-a-title" name="custom">
+			<aui:validator errorMessage="you-must-specify-a-file" name="custom">
 				function(val, fieldNode, ruleValue) {
-					return ((val != '') || A.one('#<portlet:namespace />file').val() != '');
+					return (val != '');
 				}
 			</aui:validator>
 		</aui:input>
+
+		<aui:input name="title" />
 
 		<c:if test="<%= ((folder == null) || folder.isSupportsMetadata()) %>">
 			<aui:input name="description" />
