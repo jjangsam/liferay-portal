@@ -660,7 +660,7 @@ AUI.add(
 							}
 						}
 					},
-
+					                                                                   asdfasdf
 					_updateSelectList: function(data) {
 						var instance = this;
 
